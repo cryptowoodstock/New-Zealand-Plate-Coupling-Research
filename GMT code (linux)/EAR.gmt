@@ -1,0 +1,5 @@
+gmt begin EAR png
+gmt coast -R-20/55/-35/39 -JM6i -B5 -W0.5 -Ggrey -Dl -A5000
+gmt meca Africa.xy -Sm0.5c/-1  -Gred -W1 -T0
+gmt end show
+

@@ -1,0 +1,10 @@
+gmt begin NZ png
+gmt basemap -Bf1a4 -JM6i -R160/184/-50/-30
+gmt coast -Df -A20 -N1 -W0.5 -Glightgreen -Slightblue
+gmt plot location.txt -Sc0.25c -Gred -W1
+gmt text -F+f10,Helvetica,gold+jTL -Gblack << EOF
+172.64 -43.53 Christchurch
+174.76 -36.84 Auckland
+EOF
+gmt plot bird_plates.xy -W1 -Sf0.45/3p
+gmt end show

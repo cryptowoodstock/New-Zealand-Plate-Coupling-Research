@@ -1,0 +1,24 @@
+gmt begin NZ_CMT6_20002009 png
+gmt basemap -Bf1a4 -JM6i -R160/184/-50/-30
+gmt coast -Df -A20 -N1 -W0.5 -Glightgreen -Slightblue
+gmt plot bird_plates.xy -W1 -Sf0.45/3p
+tail -n +2 GPS_DATA.txt | gmt velo -Se0.02/0.95 -A+e3p+a20 -W0.5p,black -Gred -V
+gmt -Tf-8/59/0.5i
+gmt plot -W2,red << EOF
+171,-44
+171,-43
+174,-43
+174,-44
+171,-44
+EOF
+gmt plot -W2,purple << EOF
+171,-43
+171,-41
+174,-41
+175,-42
+174,-42
+174,-43
+171,-43
+EOF
+gmt meca NZ_CMT6_20002009.txt -Gred -Sd0.5/-1
+gmt end show

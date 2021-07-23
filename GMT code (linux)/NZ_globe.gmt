@@ -1,0 +1,11 @@
+gmt begin globe png
+gmt coast -B360 -Rg -JG172/-42/15c -Dc -A50000 -Slightblue -Glightgreen -W0.5
+gmt plot bird_plates.xy -W2
+gmt plot -W2 << EOF
+160 -50
+160 -30
+184 -30
+184 -50
+160 -50
+EOF
+gmt end show

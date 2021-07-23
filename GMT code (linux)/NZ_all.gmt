@@ -1,0 +1,95 @@
+gmt begin NZ_all png
+gmt basemap -Bf1a4 -JM6i -R160/184/-50/-30
+gmt coast -Df -A20 -N1 -W0.5 -Glightgreen -Slightblue
+gmt plot bird_plates.xy -W1 -Sf0.45/3p
+gmt meca NZ_all.txt -Sm0.3c/-1 -Gred
+
+#zone 1
+gmt plot -W2,red << EOF
+162 -50
+165.4 -50
+166.9 -46.5
+169 -45.3
+167 -43.8
+163.6 -45.6
+162 -50
+EOF
+
+#zone 2
+gmt plot -W2,red << EOF
+169 -45.3
+167 -43.8
+169.8 -42.3
+171.9 -44.1
+169 -45.3
+EOF
+
+#zone 3
+gmt plot -W2,red << EOF
+169.8 -42.3
+171.9 -44.1
+175.9 -43.1
+174.2 -41.3
+172.2 -40
+169.8 -42.3
+EOF
+
+#zone 4
+gmt plot -W2,red << EOF
+172.2 -40
+174.2 -41.3
+175.9 -41.1
+176.7 -39.9
+174.8 -38.6
+172.2 -40
+EOF
+
+#zone 5
+gmt plot -W2,red << EOF
+175.9 -43.1
+174.2 -41.3
+175.9 -41.1
+176.7 -39.9
+180 -41
+178.2 -42.7
+175.9 -43.1
+EOF
+
+#zone 6
+gmt plot -W2,red << EOF
+176.7 -39.9
+174.8 -38.6
+176.6 -35.5
+178.6 -36.2
+176.7 -39.9
+EOF
+
+#zone 7
+gmt plot -W2,red << EOF
+176.7 -39.9
+180 -41
+181.9 -37.4
+178.6 -36.2
+176.7 -39.9
+EOF
+
+#zone 8
+gmt plot -W2,red << EOF
+176.6 -35.5
+178.6 -36.2
+-178.1 -30
+179.2 -30
+176.6 -35.5
+EOF
+
+#zone 9 
+gmt plot -W2,red << EOF
+181.9 -37.4
+178.6 -36.2
+-178.1 -30
+-176 -30
+-176 -33.3
+181.9 -37.4
+EOF
+
+gmt end show

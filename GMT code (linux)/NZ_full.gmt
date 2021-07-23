@@ -1,0 +1,28 @@
+gmt begin NZ.full png
+gmt basemap -Bf1a4 -JM6i -R160/184/-50/-30
+gmt grdimage /usr/local/ibastow/gmt_grd/ETOPO1_Bed_g_gdal.grd \
+-I/usr/local/ibastow/gmt_grd/ETOPO1_Bed_g_gdal_i.grd -Csealand.cpt
+gmt coast -Df -A20 -N1 -W0.5
+gmt plot bird_plates.xy -W2 -Sf0.45/3p
+gmt plot location.txt -Sc0.25c -Gred -W1
+gmt text -F+f10,Helvetica,gold+jTL -Gblack << EOF
+172.64 -43.53 Christchurch
+174.76 -36.84 Auckland
+EOF
+
+gmt plot -Sv0.6c+e -G30/11/202 -W1 -L << EOF
+0.12 51.5 48.73 2.3
+EOF
+
+gmt colorbar -Dx1/13/4c/0.5c -E -Csealand.cpt -Ba3000f3000g3000 -By+l"elev (m)"
+
+gmt coast -B360 -Rg -JG-176/-50/5c -Dc -A50000 -Slightblue -Glightgreen -W0.5 -X10 -Y0.5
+gmt plot bird_plates.xy -W1
+gmt plot -W2,red << EOF
+160 -50
+160 -30
+184 -30
+184 -50
+160 -50
+EOF
+gmt end show

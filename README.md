@@ -1,4 +1,4 @@
-# Research at Imperial College London (OCt 2020)
+# Research at Imperial College London (Oct 2020)
 
 ## Pacific-Australian Plate coupling along New Zealand: determined from velocity calculated by Kostrov Summation Method 
 
